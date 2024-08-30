@@ -37,7 +37,7 @@ func GetProjectById(c *fiber.Ctx) error {
 
 func UpdateProject(c *fiber.Ctx) error {
 	id := c.Params("project_id")
-	var updatedProject models.Project
+	var updatedProject models.ProjectModel
 	if err := c.BodyParser(&updatedProject); err != nil {
 		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
 	}
