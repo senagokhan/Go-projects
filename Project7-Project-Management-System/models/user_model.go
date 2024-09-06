@@ -4,7 +4,7 @@ type UserModel struct {
 	UserId       int    `json:"userId"`
 	Username     string `json:"username"`
 	Password     string `json:"password"`
-	PasswordHash string `json:"-"`
+	PasswordHash string `json:"password_hash"`
 	Email        string `json:"email"`
 	Role         string `json:"role"`
 }
